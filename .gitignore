@@ -1,0 +1,38 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Environment
+.env
+*.env
+
+# Virtual environment
+venv/
+ENV/
+env/
+
+# Migrations (if not version-controlled)
+migrations/
+
+# Logs and database files
+*.log
+*.sqlite3
+instance/
+*.db
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Pytest
+.pytest_cache/
+.coverage
+
+# VS Code
+.vscode/
+
+# Gunicorn/PID
+*.pid
