@@ -14,7 +14,10 @@ def contact():
     email = data.get("email")
     message = data.get("message")
 
+    print(f"Received: name={name}, email={email}, message={message}")
+
     if not all([name, email, message]):
+        print("Missing required fields.")
         return jsonify({"success": False, "error": "Missing fields"}), 400
 
     try:
@@ -26,6 +29,8 @@ def contact():
         )
         conn.commit()
         cur.close()
+        print("Data inserted successfully.")
         return jsonify({"success": True, "message": "Message stored successfully"})
     except Exception as e:
+        print(f"Error in /api/contact: {e}")
         return jsonify({"success": False, "error": str(e)}), 500
