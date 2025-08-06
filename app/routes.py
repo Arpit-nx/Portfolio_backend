@@ -32,5 +32,6 @@ def contact():
         print("Data inserted successfully.")
         return jsonify({"success": True, "message": "Message stored successfully"})
     except Exception as e:
-        print(f"Error in /api/contact: {e}")
+        current_app.logger.error(f"Error in /api/contact: {e}")
         return jsonify({"success": False, "error": str(e)}), 500
+0
