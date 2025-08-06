@@ -34,4 +34,3 @@ def contact():
     except Exception as e:
         current_app.logger.error(f"Error in /api/contact: {e}")
         return jsonify({"success": False, "error": str(e)}), 500
-0
